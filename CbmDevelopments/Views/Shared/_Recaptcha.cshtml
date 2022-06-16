@@ -1,0 +1,30 @@
+﻿@using Domain.Recaptcha
+@model RecaptchaViewModel
+@inject IRecaptchaConfiguration RecaptchaConfiguration
+
+@if (Model.DisplayRecaptchaText)
+{
+	<div class="recaptcha-text" data-selenium-id="pnl_recaptchaText">
+		This site is protected by reCAPTCHA.<br />The Google <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a> and <a href="https://policies.google.com/terms" target="_blank">Terms of Service</a> apply.
+	</div>
+}
+
+<div id='recaptcha' class="g-recaptcha" data-sitekey='@RecaptchaConfiguration.SiteKey' data-callback="onRecaptchaSubmit" data-size="invisible"></div>
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+	function onRecaptchaSubmit() {
+		$('@Model.FormSelector').submit();
+		console.log("captcha fired");
+	}
+
+	$(document).ready(function() {
+		$('@Model.SubmitButtonSelector').click(function(e) {
+			$('@Model.SubmitButtonSelector').attr('disabled', 'disabled');
+			e.preventDefault();
+
+			grecaptcha.execute();
+		});
+
+	});
+</script>

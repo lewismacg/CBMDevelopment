@@ -1,0 +1,14 @@
+﻿[
+	{
+		"outputFile": "wwwroot/css/global.min.css",
+		"inputFile": "wwwroot/less/global.less"
+	},
+	{
+		"outputFile": "wwwroot/css/landing.min.css",
+		"inputFile": "wwwroot/less/landing.less"
+	},
+	{
+		"outputFile": "wwwroot/css/cbm_custom.min.css",
+		"inputFile": "wwwroot/less/cbm_custom.less"
+	}
+]

@@ -1,0 +1,165 @@
+﻿@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>CBM Developments | Guiding You Home | Property Development</title>
+	<meta name="description" content="CBM Developments - a distinct property development business located in the the south of England. Find our latest projects and get in touch regarding purchasing or investing." />
+	<meta name="robots" content="index, follow">
+	<meta name="format-detection" content="telephone=no">
+	<meta property="og:locale" content="en_UK" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="CBM Developments" />
+	<meta property="og:description" content="CBM Developments - a distinct property development business located in the the south of England. Find our latest projects and get in touch regarding purchasing or investing." />
+	<meta property="og:site_name" content="CBM Developments" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="~/css/landing.min.css" />
+	<link rel="stylesheet" href="~/css/global.min.css" />
+	<link rel="stylesheet" href="~/css/cbmModal.min.css" />
+
+	<script src="https://kit.fontawesome.com/2e9e21394b.js" crossorigin="anonymous"></script>
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-GRP6C78W06"></script>
+	<script>
+		var host = window.location.hostname;
+		if (host != "localhost") {
+			window.dataLayer = window.dataLayer || [];
+			function gtag() { dataLayer.push(arguments); }
+			gtag('js', new Date());
+
+			gtag('config', 'G-GRP6C78W06');
+		}
+	</script>
+</head>
+<body>
+	<header>
+		<nav>
+			<div class="container">
+				<div class="col-sm-12">
+					<ul>
+						<li>
+							<a asp-area="" asp-controller="Home" asp-action="Index">
+								<picture>
+									<source media="(min-width:541px)" srcset="~/img/cbm_developments_logo_horizontal.png" />
+									<source media="(max-width:540px)" srcset="~/img/cbm_developments_logo.png" />
+									<img class="logo" src="~/img/cbm_developments_logo_horizontal.png" title="CBM Developments" alt="CBM Developments Logo" />
+								</picture>
+							</a>
+						</li>
+						<li class="d-none d-lg-inline-block">
+							<a title="Investments" asp-area="" asp-controller="Home" asp-action="Investments"><i class="fas fa-handshake fa-fw mr-2"></i> Investments</a>
+						</li>
+						<li class="d-none d-lg-inline-block">
+							<a title="Previous work" asp-area="" asp-controller="Home" asp-action="PreviousWork"><i class="fas fa-building fa-fw mr-2"></i> Previous work</a>
+						</li>
+						<li>
+							<a title="Get in touch!" class="btn-invert contact-us" href="#"><i class="far fa-paper-plane fa-fw"></i> Get In Touch</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<section id="hero">
+		<div class="container">
+			<div class="hero-wrapper">
+				<div>
+					<h1>
+						CBM Developments.
+						<br />
+						Guiding You Home.
+					</h1>
+					<ul>
+						<li>
+							<a class="button btn-invert" asp-area="" asp-controller="Home" asp-action="Investments">Investments</a>
+						</li>
+						<li>
+							<a class="button btn-invert" asp-area="" asp-controller="Home" asp-action="PreviousWork">Previous Work</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="explanation">
+		<div class="bg-section-sm"></div>
+		<div class="container">
+			<div class="col-sm-12">
+				<h2>
+					CBM Developments is a privately owned company providing housing across Surrey and the South of England. Creating distinct, astonishingly well-crafted homes, in the Town, the Countryside & the City.
+				</h2>
+				<ul>
+					<li class="testimonial">
+						<div class="avatar-wrapper">
+							<img alt="Testimonial for CBM Developments from client 1" class="avatar" src="~/img/jessica_phillips.png" />
+						</div>
+						<div class="testimonial-text">
+							<p>"Craig has been great, for somebody just getting started in the trade he has given us some great information about our next move and we really value his insight."</p>
+							<div class="testimonial-author">
+								<div>
+									<span class="emphasis">Jessica Phillips</span>, Homeowner
+								</div>
+								<div>
+									<i class="fas fa-map-marker-alt fa-fw"></i> Guildford, Surrey UK
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="testimonial">
+						<div class="avatar-wrapper">
+							<img alt="Testimonial for CBM Developments from client 2" class="avatar" src="~/img/oliver_hardy.png" />
+						</div>
+						<div class="testimonial-text">
+							<p>"CBM Developments is a real up-and-comer in the property development world. I'm excited to be working closely with them and to see what the next venture may be!"</p>
+							<div class="testimonial-author">
+								<div>
+									<span class="emphasis">Oliver Hardy</span>, Property Developer
+								</div>
+								<div>
+									<i class="fas fa-map-marker-alt fa-fw"></i> Telford, Shropshire UK
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<section id="contact">
+		<div class="bg-section-sm bg-section-opposite"></div>
+		<div class="container">
+			<div class="col-sm-12">
+				<h2>Got a property, a piece of land, or perhaps something even bigger that you think has development potential? Please get in touch! CBM Developments would love to take a look and see what sort of deal can be done.</h2>
+				<ul>
+					<li>
+						<a class="button btn-invert contact-us" href="#"><i class="far fa-paper-plane fa-fw"></i> Contact us today!</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<div class="content-box-shadow" id="contactUsForm" style="display: none">
+		<partial name="_ContactUsForm" />
+	</div>
+	<footer>
+		<partial name="_Footer" />
+	</footer>
+	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+	<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+	<script src="~/js/contact-us.min.js" asp-append-version="true"></script>
+	<script src="~/js/modal.min.js" asp-append-version="true"></script>
+	<script type="text/javascript">
+		ContactUs.formPopup($('.contact-us'), $('#contactUsForm'));
+	</script>
+</body>
+</html>

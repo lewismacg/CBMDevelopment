@@ -1,0 +1,86 @@
+﻿@{
+	Layout = "_Layout";
+	ViewData["Title"] = "Contact us today";
+	var errors = ViewData.ModelState.Values.SelectMany(v => v.Errors.Select(b => b.ErrorMessage));
+	@model ContactUsModel;
+}
+@section AdditionalMeta
+{
+	<meta name="description" content="CBM Developments - Contact Us. Get in touch today to talk about land or investment opportunities." />
+	<meta name="robots" content="index, follow">
+	<meta property="og:title" content="CBM Developments | Get in touch!" />
+	<meta property="og:description" content="CBM Developments - Contact us. Get in touch today to talk about land or investment opportunities." />
+	<meta property="og:locale" content="en_UK" />
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="CBM Developments" />
+}
+<div class="row">
+	<div class="col-sm-12">
+		<div class="header-wrapper header-image contact-us">
+			<h1>
+				Interested in one of our projects
+				<br />
+				or have a plot of land that you feel has potential?
+			</h1>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-12">
+		<div class="sub-nav">
+		</div>
+	</div>
+</div>
+<div class="container mt-5">
+	<div class="content-box-padding">
+		<form asp-controller="Home" asp-action="ContactUs" method="post" id="main-contact-form" novalidate>
+			<div class="col-sm-12">
+				<h1>
+					<i class="far fa-paper-plane fa-fw"></i> Get in touch below!
+				</h1>
+				<p>
+					Contact us on <strong>+44 (0) 7427474745</strong> or drop us an email using the following form.
+				</p>
+				<div class="alert alert-warning">
+					<strong>Notice.</strong> Please allow up to 3 working days for us to respond.
+				</div>
+
+				<div class="mt-3 mb-3">
+					<div class="form-group">
+						<label class="required-label font-weight-bold" asp-for="Name">Name</label>
+						<input asp-for="Name" class="form-control form-control-lg" placeholder="Please enter your name" required />
+						<span asp-validation-for="Name" class="text-danger"></span>
+					</div>
+					<div class="clearfix"></div>
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							<label class="required-label font-weight-bold" asp-for="Email">Email Address</label>
+							<input asp-for="Email" class="form-control form-control-lg" placeholder="Please enter the email address you wish to be contacted on" required />
+							<span asp-validation-for="Email" class="text-danger"></span>
+						</div>
+						<div class="clearfix"></div>
+						<div class="form-group col-md-6">
+							<label class="font-weight-bold" asp-for="PhoneNumber">Phone Number</label>
+							<input asp-for="PhoneNumber" class="form-control form-control-lg" placeholder="Please enter a phone number to contact you on (optional)" />
+						</div>
+					</div>
+					<div class="clearfix"></div>
+					<div class="form-group">
+						<label class="required-label font-weight-bold" asp-for="Message">Your Message</label>
+						<input asp-for="Message" rows="5" class="form-control form-control-lg" placeholder="Please enter your query/message" required />
+						<span asp-validation-for="Message" class="text-danger"></span>
+					</div>
+					<div class="clearfix"></div>
+					<br />
+				</div>
+				<button type="submit" id="btn_submit" class="button btn-expand btn-confirm" data-sitekey="6Lc9xw0aAAAAAKMf90ulAyWJJlJijv0QFOcUz7cm" data-callback='onRecaptchaSubmit' data-action='submit' data-size="invisible"><i class="far fa-envelope fa-fw"></i> Send Email</button>
+				<br />
+				@foreach (var errorMessage in errors)
+				{
+					<p class="text-danger field-validation-error">@errorMessage</p>
+				}
+				<partial name="_Recaptcha" model='new RecaptchaViewModel {FormSelector = "#main-contact-form", SubmitButtonSelector = "#btn_submit", DisplayRecaptchaText = false}' />
+			</div>
+		</form>
+	</div>
+</div>

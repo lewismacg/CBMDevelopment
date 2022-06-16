@@ -1,0 +1,243 @@
+﻿@import "colors.less";
+
+.container:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.bg-section-sm {
+	position: absolute;
+	top: -60px;
+	left: -50%;
+	width: 180%;
+	height: 200px;
+	transform: rotate(-4deg);
+	-webkit-transform: rotate(-4deg);
+	z-index: 0;
+}
+
+.bg-section-sm:before {
+	content: '';
+	position: absolute;
+	left: -50%;
+	background: @brandgold;
+	width: 200%;
+	height: 4px;
+	z-index: 0;
+}
+
+.bg-section-opposite {
+	transform: rotate(4deg) !important;
+	width: 250% !important;
+	-webkit-transform: rotate(4deg) !important;
+}
+
+/*******
+* HERO
+*******/
+#hero {
+	position: relative;
+	height: 100vh;
+	background-image: url(../img/hero_1.jpg);
+	background-size: cover;
+	background-position: 50% 50%;
+}
+
+#hero:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+}
+
+#hero .container {
+	height: 100%;
+	position: relative;
+}
+
+#hero .hero-wrapper {
+	margin-top: -20px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	-ms-align-items: center;
+	align-items: center;
+	height: 100%;
+}
+
+#hero .hero-wrapper h1 {
+	margin-bottom: 0.5em;
+	font-size: 3.5rem;
+}
+
+@media (min-width: 550px) {
+	#hero .hero-wrapper h1 {
+		font-size: 5rem;
+	}
+}
+
+#hero h1 {
+	color: @brandwhite;
+}
+
+#hero ul {
+	margin-bottom: 0;
+}
+
+#hero ul li {
+	display: inline-block;
+	list-style: none;
+}
+
+#hero ul li:first-child {
+	padding-right: 1rem;
+}
+
+/*******
+* EXPLANATION
+*******/
+
+#explanation {
+	background-color: @brandgrey;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: relative;
+	padding-bottom: 30vw;
+	padding: 8rem 0 18rem;
+}
+
+#explanation .bg-section-sm {
+	background-color: @brandgrey;
+}
+
+#explanation h2 {
+	color: @brandwhite;
+	text-align: center;
+	margin-bottom: 2em;
+}
+
+#explanation .testimonial {
+	position: relative;
+}
+
+#explanation li {
+	position: relative;
+	display: block;
+	margin: 0 0 10rem;
+	padding: 0;
+}
+
+#explanation .avatar-wrapper {
+	position: relative;
+	display: block;
+	margin-bottom: 25px;
+	height: auto;
+	text-align: center;
+}
+
+#explanation .testimonial-text {
+	position: relative;
+	padding: 2rem;
+	color: #ffffff;
+	border: 2px solid;
+	background-color: @brandgold;
+	box-sizing: border-box;
+	border-radius: 5px;
+}
+
+@media (min-width: 750px) {
+	#explanation .avatar-wrapper {
+		position: absolute;
+		margin-bottom: 0;
+		height: 100%;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-align-items: center;
+		-moz-align-items: center;
+		-ms-align-items: center;
+		align-items: center;
+		justify-content: center;
+	}
+
+	#explanation .testimonial-text {
+		margin-left: 15.5rem;
+	}
+}
+
+#explanation .avatar {
+	width: 12rem;
+	border-radius: 50%;
+}
+
+#explanation .testimonial-text p {
+	margin-bottom: 0;
+}
+
+#explanation .testimonial-author {
+	margin-top: 0.75rem;
+	color: @brandwhite;
+}
+
+/*******
+* CONTACT
+*******/
+
+#contact {
+	background-image: url(../img/street_illustration.png);
+	background-position: center bottom, 0 10vh, center bottom;
+	background-repeat: no-repeat, repeat, no-repeat;
+	background-size: contain;
+	position: relative;
+	padding: 8rem 0 18rem;
+	padding-bottom: 30vw;
+	text-align: center;
+}
+
+#contact .bg-section-sm {
+	background-color: @brandwhite
+}
+
+@media (min-width: 750px) {
+	#contact {
+		padding-bottom: 15vw;
+	}
+
+	#contact .button {
+		padding: 0 40px;
+	}
+}
+
+#contact h2 {
+	color: @brandgrey;
+	text-align: center;
+	margin-bottom: 2em;
+}
+
+#contact ul {
+	margin-bottom: 0;
+}
+
+#contact ul li {
+	display: inline-block;
+	list-style: none;
+}
+
+#contact .button {
+	border-color: @brandgrey;
+	margin-bottom: 2.5rem;
+	height: 57px;
+	padding: 0 20px;
+	line-height: 57px;
+	letter-spacing: 0.18rem;
+	border-radius: 5px;
+}

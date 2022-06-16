@@ -1,0 +1,53 @@
+﻿@model ContactUsModel
+
+<div class="content-box-padding scrolling-content">
+	<form asp-controller="Home" asp-action="ContactUs" method="post" id="popup-contact-form" novalidate>
+		<div class="col-sm-12">
+			<h1 class="pt-4"><i class="far fa-paper-plane fa-fw"></i> Get in touch below!</h1>
+			<p>
+				Interested in one of our projects or have a plot of land that you feel has potential?
+				We would love to hear from you!
+			</p>
+			<p>
+				Contact us on <strong>+44 (0) 7427474745</strong> or drop us an email using the following form.
+			</p>
+			<div class="alert alert-warning">
+				<strong>Notice.</strong> Please allow up to 3 working days for us to respond.
+			</div>
+
+			<div class="mt-3 mb-3">
+				<div class="form-group">
+					<label class="required-label font-weight-bold" asp-for="Name">Name</label>
+					<input asp-for="Name" class="form-control form-control-lg" placeholder="Please enter your name" required />
+					<span asp-validation-for="Name" class="text-danger"></span>
+				</div>
+				<div class="clearfix"></div>
+				<div class="form-row">
+					<div class="form-group col-md-6">
+						<label class="required-label font-weight-bold" asp-for="Email">Email Address</label>
+						<input asp-for="Email" class="form-control form-control-lg" placeholder="Please enter the email address you wish to be contacted on" required />
+						<span asp-validation-for="Email" class="text-danger"></span>
+					</div>
+					<div class="clearfix"></div>
+					<div class="form-group col-md-6">
+						<label class="font-weight-bold" asp-for="PhoneNumber">Phone Number</label>
+						<input asp-for="PhoneNumber" class="form-control form-control-lg" placeholder="Please enter a phone number to contact you on (optional)" />
+					</div>
+				</div>
+				<div class="clearfix"></div>
+				<div class="form-group">
+					<label class="required-label font-weight-bold" asp-for="Message">Your Message</label>
+					<input asp-for="Message" rows="5" class="form-control form-control-lg" placeholder="Please enter your query/message" required />
+					<span asp-validation-for="Message" class="text-danger"></span>
+				</div>
+				<div class="clearfix"></div>
+				<br />
+			</div>
+
+			<button type="submit" id="btn_submit" class="button btn-expand btn-confirm"><i class="far fa-envelope fa-fw"></i> Send Email</button>
+			<div id="btn_cancel" class="button btn-expand"><i class="fas fa-times fa-fw"></i> Cancel</div>
+
+			<partial name="_Recaptcha" model='new RecaptchaViewModel {FormSelector = "#popup-contact-form", SubmitButtonSelector = "#btn_submit", DisplayRecaptchaText = false}' />
+		</div>
+	</form>
+</div>

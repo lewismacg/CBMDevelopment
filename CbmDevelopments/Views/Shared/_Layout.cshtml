@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>@ViewData["Title"] | CBM Developments</title>
+	<meta name="format-detection" content="telephone=no">
+	@RenderSection("AdditionalMeta", false)
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="~/css/global.min.css" />
+	<link rel="stylesheet" href="~/css/cbmModal.min.css" />
+	<link rel="stylesheet" href="~/css/cbm_custom.min.css" />
+	@RenderSection("Styles", false)
+	<script src="https://kit.fontawesome.com/2e9e21394b.js" crossorigin="anonymous"></script>
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-GRP6C78W06"></script>
+	<script>
+		var host = window.location.hostname;
+		if (host != "localhost") {
+			window.dataLayer = window.dataLayer || [];
+			function gtag() { dataLayer.push(arguments); }
+			gtag('js', new Date());
+
+			gtag('config', 'G-GRP6C78W06');
+		}
+	</script>
+</head>
+<body>
+	<header>
+		<nav class="navbar border-bottom global-nav">
+			<div class="container">
+				<a asp-area="" asp-controller="Home" asp-action="Index">
+					<picture>
+						<source media="(min-width:541px)" srcset="~/img/cbm_developments_logo_horizontal.png" />
+						<source media="(max-width:540px)" srcset="~/img/cbm_developments_logo.png" />
+						<img class="logo" src="~/img/cbm_developments_logo_horizontal.png" title="CBM Developments" alt="CBM Developments Logo" />
+					</picture>
+				</a>
+				<ul class="d-none d-lg-block">
+					<li>
+					</li>
+					<li>
+						<a title="Investments" class="white" asp-area="" asp-controller="Home" asp-action="Investments"><i class="fas fa-handshake fa-fw mr-2"></i> Investments</a>
+					</li>
+					<li>
+						<a title="Previous work" class="white" asp-area="" asp-controller="Home" asp-action="PreviousWork"><i class="fas fa-building fa-fw mr-2"></i> Previous Work</a>
+					</li>
+					<li>
+						<a title="Get in touch!" class="btn-invert" asp-area="" asp-controller="Home" asp-action="ContactUs"><i class="far fa-paper-plane fa-fw"></i> Get In Touch</a>
+					</li>
+				</ul>
+				<ul class="d-lg-none">
+					<li>
+					</li>
+					<li>
+						<a title="Investments" class="white" asp-area="" asp-controller="Home" asp-action="Investments"><i class="fas fa-handshake fa-fw"></i></a>
+					</li>
+					<li>
+						<a title="Previous work" class="white" asp-area="" asp-controller="Home" asp-action="PreviousWork"><i class="fas fa-building fa-fw fa-lg"></i></a>
+					</li>
+					<li>
+						<a title="Get in touch!" class="btn-invert" asp-area="" asp-controller="Home" asp-action="ContactUs"><i class="far fa-paper-plane fa-fw fa-lg"></i></a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<main role="main">
+		@RenderBody()
+	</main>
+	<footer>
+		<partial name="_Footer" />
+	</footer>
+	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+	<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+	@RenderSection("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,26 @@
+[
+	{
+		"outputFileName": "wwwroot/js/contact-us.min.js",
+		"inputFiles": [
+			"wwwroot/js/contact-us.js"
+		]
+	},
+	{
+		"outputFileName": "wwwroot/js/modal.min.js",
+		"inputFiles": [
+			"wwwroot/js/modal.js"
+		]
+	},
+	{
+		"outputFileName": "wwwroot/js/switch-section.min.js",
+		"inputFiles": [
+			"wwwroot/js/switch-section.js"
+		]
+	},
+	{
+		"outputFileName": "wwwroot/css/cbmModal.min.css",
+		"inputFiles": [
+			"wwwroot/css/cbmModal.css"
+		]
+	}
+]
